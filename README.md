@@ -12,12 +12,18 @@ Visual Studio2022  x86-Release
 
 # 主要包含库
 
-**gl3w**      
+**gl3w**   
+
 **glfw**
+
 **imgui**
+
 **imguiFileDialog**
+
 **libxlsxwrite**            ：：处理xlsx文件，可使用vcpkg安装
+
 **mini**                    ：：处理ini文件
+
 **pugixml**                 ：：处理xml文件
 
 

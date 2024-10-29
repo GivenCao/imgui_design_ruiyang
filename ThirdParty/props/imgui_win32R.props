@@ -3,13 +3,18 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <IncludePath>$(SolutionDir)ThirdParty\gl3w\include;$(SolutionDir)ThirdParty\glfw\include;$(SolutionDir)ThirdParty\imgui;$(SolutionDir)ThirdParty\imgui\backends;$(SolutionDir)ThirdParty\ImGuiFileDialog;$(SolutionDir);$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)ThirdParty\gl3w\lib;$(SolutionDir)ThirdParty\glfw\lib;$(SolutionDir)ThirdParty\imgui\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)ThirdParty\gl3w\include;$(SolutionDir)ThirdParty\glfw\include;$(SolutionDir)ThirdParty\imgui;$(SolutionDir)ThirdParty\imgui\backends;$(SolutionDir)ThirdParty\ImGuiFileDialog;$(SolutionDir)ThirdParty\libxlsxwriter\include;$(SolutionDir)ThirdParty;$(SolutionDir);$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)ThirdParty\libxlsxwriter\lib;$(SolutionDir)ThirdParty\gl3w\lib;$(SolutionDir)ThirdParty\glfw\lib;$(SolutionDir)ThirdParty\imgui\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)Bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Int\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <Link>
-      <AdditionalDependencies>opengl32.lib;gl3w.lib;glfw3.lib;imgui.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;gl3w.lib;glfw3.lib;imgui.lib;xlsxwriter.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup />
 </Project>

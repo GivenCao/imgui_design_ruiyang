@@ -73,8 +73,11 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)Bin\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)Int\$(Configuration)\$(ProjectName)\</IntDir>
-    <IncludePath>$(SolutionDir)ThirdParty\gl3w\include;$(SolutionDir)ThirdParty\glfw\include;$(SolutionDir)ThirdParty\imgui;$(SolutionDir)ThirdParty\imgui\backends;$(SolutionDir)ThirdParty\ImGuiFileDialog;$(SolutionDir)ThirdParty\libxlsxwriter\include;$(SolutionDir)ThirdParty;$(SolutionDir);$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)ThirdParty\libxlsxwriter\lib;$(SolutionDir)ThirdParty\glfw\lib;$(SolutionDir)ThirdParty\gl3w\lib;$(SolutionDir)ThirdParty\imgui\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)ThirdParty\gl3w\include;$(SolutionDir)ThirdParty\glfw\include;$(SolutionDir)ThirdParty\imgui;$(SolutionDir)ThirdParty\imgui\backends;$(SolutionDir)ThirdParty\ImGuiFileDialog;$(SolutionDir)ThirdParty\libxlsxwriter\include;$(SolutionDir)ThirdParty\minizip\include;$(SolutionDir)ThirdParty\zib\include;$(SolutionDir)ThirdParty;$(SolutionDir);$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)ThirdParty\libxlsxwriter\lib;$(SolutionDir)ThirdParty\glfw\lib;$(SolutionDir)ThirdParty\gl3w\lib;$(SolutionDir)ThirdParty\imgui\lib;$(SolutionDir)ThirdParty\zlib\lib;$(SolutionDir)ThirdParty\minizip\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnabled>false</VcpkgEnabled>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -103,7 +106,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opengl32.lib;gl3w.lib;glfw3.lib;imgui.lib;xlsxwriter.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;gl3w.lib;glfw3.lib;imgui.lib;xlsxwriter.lib;minizip.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
